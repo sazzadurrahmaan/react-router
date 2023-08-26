@@ -1,9 +1,9 @@
 export default function Root() {
     return (
       <>
-        <div id="sidebar">
+        <div id="sidebar" className="bg-gray-100 w-1/4 p-10">
           <h1>React Router Contacts</h1>
-          <div>
+          <div className="flex ">
             <form id="search-form" role="search">
               <input
                 id="q"
@@ -11,6 +11,7 @@ export default function Root() {
                 placeholder="Search"
                 type="search"
                 name="q"
+                className="shadow appearance-none border rounded-md w-50 py-2 px-3  rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
               />
               <div
                 id="search-spinner"
@@ -23,11 +24,11 @@ export default function Root() {
               ></div>
             </form>
             <form method="post">
-              <button type="submit">New</button>
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-5" type="submit" >New</button>
             </form>
           </div>
-          <nav>
-            <ul>
+          <nav className="mt-10">
+            <ul className="font-2xl font-serif">
               <li>
                 <a href={`/contacts/1`}>Your Name</a>
               </li>
