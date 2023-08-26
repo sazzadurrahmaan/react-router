@@ -1,7 +1,7 @@
 export default function Root() {
     return (
       <>
-        <div id="sidebar" className="bg-gray-100 w-1/4 p-10">
+        <div id="sidebar" className="bg-gray-100 w-1/4 p-10 h-auto">
           <h1>React Router Contacts</h1>
           <div className="flex ">
             <form id="search-form" role="search">
@@ -28,12 +28,12 @@ export default function Root() {
             </form>
           </div>
           <nav className="mt-10">
-            <ul className="font-2xl font-serif">
-              <li>
-                <a href={`/contacts/1`}>Your Name</a>
+            <ul className="font-2xl font-serif p-5">
+              <li >
+                <a  href={`/contacts/1`}>Your Name</a>
               </li>
               <li>
-                <a href={`/contacts/2`}>Your Friend</a>
+                <a  href={`/contacts/2`}>Your Friend</a>
               </li>
             </ul>
           </nav>
