@@ -11,10 +11,11 @@ const Root = () => {
         <ul className='text-blue-800 p-10'>
           <Link to="/">Home</Link>
           <Link to="users">Users</Link>
+          <Link to="posts">Posts</Link>
         </ul>
       </nav>
     </div>
-        <div className='grid grid-cols-2'>
+        <div className='grid grid-cols-3'>
        <div id="sidebar" className='pt-5 pl-6 bg-gray-100 p-11 w-96 h-screen'>
         <div className='flex '>
           <form id="search-form" role="search">
