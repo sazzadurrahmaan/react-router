@@ -1,9 +1,20 @@
 import React from 'react';
 import Button from '@mui/material/Button';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link} from "react-router-dom";
+
 const Root = () => {
+  
   return (
+    <>
     <div>
+      <nav>
+        <ul className='text-blue-800 p-10'>
+          <Link to="/">Home</Link>
+          <Link to="users">Users</Link>
+        </ul>
+      </nav>
+    </div>
+        <div className='grid grid-cols-2'>
        <div id="sidebar" className='pt-5 pl-6 bg-gray-100 p-11 w-96 h-screen'>
         <div className='flex '>
           <form id="search-form" role="search">
@@ -33,12 +44,12 @@ const Root = () => {
           </form>
         </div>
         <nav className='mt-10 text-lg font-medium	'>
-          <ul>
-            <li className='my-5'>
-            <Link to={`contacts/1`}>Your Name</Link>
+        <ul>
+            <li>
+            <Link to={`users/1`}>Your Name</Link>
             </li>
             <li>
-            <Link to={`contacts/2`}>Your Friend</Link>
+            <Link to={`users/2`}>Your Friend</Link>
             </li>
           </ul>
         </nav>
@@ -47,6 +58,8 @@ const Root = () => {
       <Outlet />
       </div>
     </div>
+    </>
+
   );
 };
 

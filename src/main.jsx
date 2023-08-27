@@ -5,10 +5,13 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Root from './components/Root/Root.jsx';
+import Root from "./components/Root/Root";
 import '@fontsource/roboto/400.css';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Contact from './components/contact/Contact';
+import Users from './components/Users/Users';
+import User from './components/User/User';
+import UserDetails from './components/UserDetails/UserDetails';
 
 const router = createBrowserRouter([
   {
@@ -17,8 +20,19 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path: "/contact",
+        path: "contacts/:contactId",
         element:<Contact></Contact>,
+       
+      },
+      {
+        path: "/users",
+        element:<Users></Users>,
+        loader : () => fetch('https://jsonplaceholder.typicode.com/users')
+      },
+      {
+        path: "user/:userId",
+        element:<UserDetails></UserDetails>,
+        loader : ({params}) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`)
       },
     ],
   },
