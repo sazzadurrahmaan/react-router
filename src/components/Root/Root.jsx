@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import { Outlet, Link} from "react-router-dom";
+import ActiveLink from '../ActiveLink/ActiveLink';
 
 const Root = () => {
   
@@ -9,9 +10,9 @@ const Root = () => {
     <div>
       <nav>
         <ul className='text-blue-800 p-10'>
-          <Link to="/">Home</Link>
-          <Link to="users">Users</Link>
-          <Link to="posts">Posts</Link>
+          <ActiveLink to="/">Home</ActiveLink>
+          <ActiveLink to="users">Users</ActiveLink>
+          <ActiveLink to="posts">Posts</ActiveLink>
         </ul>
       </nav>
     </div>
