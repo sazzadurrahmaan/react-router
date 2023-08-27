@@ -8,14 +8,20 @@ import {
 import Root from './components/Root/Root.jsx';
 import '@fontsource/roboto/400.css';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import Contact from './components/contact/Contact';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
     errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        path: "/contact",
+        element:<Contact></Contact>,
+      },
+    ],
   },
-
 
 ]);
 
